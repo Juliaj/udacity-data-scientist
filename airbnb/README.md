@@ -24,6 +24,10 @@ Data preparation and analysis are stored in various Jupyter notebooks:
 
 - **Airbnb Rental Price Prediction .ipynb** details the modeling of rental price. Two models are produced based on different handling of property_type feature. 
 
+Blog 
+------------
+https://github.com/Juliaj/udacity-data-scientist/blob/gh-pages/index.md 
+
 Project Organization
 ------------
 
