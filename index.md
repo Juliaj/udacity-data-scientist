@@ -3,10 +3,11 @@
 I've always been in tech industry and never explored any other career paths. When I have had a chance to look at the year 2016 data from Airbnb lately, I realized that you could make a living and a good fortune from Airbnb rentals. I've traveled many places all over the world, Seattle and Boston are two of my most favorite cities. Here, I am going to relive as an Airbnb property owner wearing a data scientist hat to examine the market in these two cities back in time.  
 
 ![Image](./images/airbnb/andrea-davis-NngNVT74o6s-unsplash.jpg)
+https://unsplash.com/photos/NngNVT74o6s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 
 ### Markets and Trends
 
-What are the hottest neighourbood for rentals? The `Captical Hill` in Seattle had almost twice of listings than the number two neighourhood `Ballard`. The listings from Boston were more linearly distributed among the top 10 neighourhoods. 
+What are the hottest neighourboods for rentals? The `Captical Hill` in Seattle had almost twice of listings than the number two neighourhood `Ballard`. The listings from Boston were more linearly distributed among the top 10 neighourhoods. 
 
 ![Image](./images/airbnb/seattle_rental_by_neighbourhood.png)
 ![Image](./images/airbnb/boston_rental_by_neighbourhood.png)
@@ -39,12 +40,12 @@ There are many factors could affect the property value and its rental price. For
 - Most of the data preparation follows standard procedure such as imputing missing data with mean, one hot encoding for categorical data etc.
 - For `property_type`, encoding was done with two different options. One is to create a hash with a bucket size. The hashing is to address the general problems associated with categorical features: incomplete vocabulary, model size due to cardinality, and cold start. The other is one hot encoding.
 
-The models trained are linear regression models. There was no significant difference in r2 score for both encodign approaches. 
+The models trained are linear regression models. There was no significant difference in r2 score for both encoding approaches. 
 
 1. with hashed features: train_score: `0.367`, test_score: `0.363`.
 2. with no feature hashing: train_score: `0.370`, test_score: `0.359`.
 
-The low r2 score could be due to the limitted data, or the initial section of the features and warrants futher investigation and improvement. 
+The low r2 scores could be due to the limitted data, or the initial section of the features and warrants futher investigation and improvement. 
 
 During experiment, one benefit of using one hot encoding with `property_type` is that it has better visibility of feature weights.  
 
