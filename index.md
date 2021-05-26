@@ -7,18 +7,26 @@ https://unsplash.com/photos/NngNVT74o6s?utm_source=unsplash&utm_medium=referral&
 
 ### Markets and Trends
 
-What are the hottest neighourboods for rentals? The `Captical Hill` in Seattle had almost twice of listings than the number two neighourhood `Ballard`. The listings from Boston were more linearly distributed among the top 10 neighourhoods. 
+Both Boston and Seattle are great metropolitan areas. One has lot of history and the other has more natural beauty. Lot of travelers and outsiders come to the cities to stay in Airbnb for a visit or to work. We look at four questions to understand these rental markets.
+
+#### where are the hottest neighourboods for rentals?
+
+The `Captical Hill` in Seattle had almost twice of listings than the number two neighourhood `Ballard`. The listings from Boston were more linearly distributed among the top 10 neighourhoods. 
 
 ![Image](./images/airbnb/seattle_rental_by_neighbourhood.png)
 ![Image](./images/airbnb/boston_rental_by_neighbourhood.png)
 
 In both cities, the top 10 neighbourhoods count for ~50% of the listings. Specically, Seattle top 10 counts for 45.81% of listings. In Boston, top 10 counts for 65.91%, a larger percentage.
 
-What is the trend from room type perspective? In both cities, the availability of entire home/apartment is comparable. For private room, Boston has more. 
+#### What is the trend from room type perspective? 
+
+In both cities, the availability of entire home/apartment is comparable. For private room, Boston has more. 
 
 ![Image](./images/airbnb/rentals_by_room_types.png)
 
 It isn't surprising to see that the shared room has the smallest share of the market. 
+
+#### Are expensive rentals available all year long?
 
 In both cities, some rentals were really expensive. Were there a market for those properties? Looking at the rentals with price point above 99 percentile, in Seattle, the price point was above $550.0 verus in Boston, the price point was above $725.0.
 
@@ -27,11 +35,13 @@ In both cities, some rentals were really expensive. Were there a market for thos
 
 Based on data, good portion of these luxuary properties were indeed long term and available all year long. This begs a question, is there any advantage of renting them through Airbnb versus renting them via local property management company? 
 
-As a rental owner, do I need to make myself always available, i.e. high host response rate to get a better review ratings? It turned out, not necessarily. 
+#### How responsive did an owner need to be in order to get good review ratings?
+
+As a rental owner, do you need to make yourself always available, i.e. high host response rate to get a better review ratings? It turned out, not necessarily. 
 
 ![Image](./images/airbnb/host_response_rate_review.png)
 
-More reviews were submitted when response rate were higher. However higher rate review score can be achived with hands-off.
+The chart shows that more reviews were submitted when response rate were higher. However higher rate review score could be achived with hands-off.
 
 ### Rental Price Prediction
 
