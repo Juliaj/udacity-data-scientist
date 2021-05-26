@@ -3,6 +3,10 @@
 import numpy as np
 
 def dropna_any(df, cols):
+    """Drop rows if any of the columns have value missing
+    Parameters:
+        cols: columns
+    """
     return df.dropna(subset=cols, how='any')
 
 def div(self, x, y):

@@ -1,7 +1,7 @@
 airbnb
 ==============================
 
-AirBnB Seattle and Boston data are prepared and analyzed following CRISP-DM methodology.
+Comparing to hotels, Airbnb provides travelers more cost effective options with greater flexibility. To property owners, Airbnb opens up a new world to reach to many customers with an easy access to its platform. In this repo, we examine Seattle and Boston Airbnb data following CRISP-DM methodology and draw insights.
 
 Installation
 ------------
@@ -55,6 +55,12 @@ Project Organization
        └── models         
            └── predict_price.py <- linear regression model and cutoff search
     
---------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+Acknowledgement 
+------------
+The Airbnb dataset for Seattle and Boston are provided by Kaggle. 
+- Boston data: https://www.kaggle.com/airbnb/boston/data
+- Seattle data: https://www.kaggle.com/airbnb/seattle/data  
+
+Project was created based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. 
