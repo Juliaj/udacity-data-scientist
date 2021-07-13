@@ -37,6 +37,36 @@ $ pip install -r requirements.txt
 4. Go to http://0.0.0.0:3001/, type in a message and see the classification result!
 ![Image](./images/web_ui.png)
 
+Project Organization
+------------
+    ├── app           
+    │   └── templates  
+    │       └── go.html <- html template file to render message classification result
+    │       └── master.html <- html template file to render main page
+    │   └── custom_transformer.py <- custom_transformer python module for model file unpickling 
+    │   └── run.py <- flask app module
+    │   └── visualization.py <- module to generate plotly objects
+    │
+    ├── data           
+    │   └── disaster_categories.csv <- raw data file for disaster categories
+    │   └── disaster_messages.csv <- raw data file for disaster messages
+    │   └── disaster-response.db <- sqlite file for cleaned data
+    │   └── ETL Pipeline Preparation.ipynb <- Jupyter notebook for ETL pipeline exploration
+    │   └── process_data.py <- ETL data pipeline code
+    │
+    ├── images
+    │   └── web_ui.png <- image file for Readme.MD visual  
+    │
+    ├── models 
+    │   └── custom_transformer.py <- custom transformer to identify whether a sentence starts with a verb 
+    │   └── ML Pipeline Preparation.ipynb <- Jupyter notebook for ML pipeline experiment
+    │   └── train_classifier.py <- feature extraction and model training pipeline code       
+    │
+    ├── README.md          <- The top-level README for developers using this project.
+    └── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+                              generated with `pip freeze > requirements.txt`
+    
+
 ### Data Processing and Modeling
 
 See detailed and results at [here](https://github.com/Juliaj/udacity-data-scientist/blob/gh-pages/disaster-response.md)
