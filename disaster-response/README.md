@@ -20,12 +20,12 @@ $ pip install -r requirements.txt
     - To run ETL pipeline that cleans data and stores into a sqllite database file
         
         ```
-        $ python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+        $ python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster-response.db
         ```
 
     - To run ML pipeline that trains classifier and saves model
         ```
-        $ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+        $ python models/train_classifier.py data/disaster-response.db models/disaster-response.pkl
         ```
 
 3. Run the following command in the app's directory to run your web app.
@@ -43,7 +43,7 @@ Project Organization
     │   └── templates  
     │       └── go.html <- html template file to render message classification result
     │       └── master.html <- html template file to render main page
-    │   └── custom_transformer.py <- custom_transformer python module for model file unpickling 
+    │   └── custom_transformer.py <- custom transformer module for model file unpickling 
     │   └── run.py <- flask app module
     │   └── visualization.py <- module to generate plotly objects
     │
