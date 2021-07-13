@@ -55,10 +55,7 @@ def transform_categories(df: pd.DataFrame, col: str='categories') -> pd.DataFram
     # convert category values to just numbers 0 or 1
     for column in categories:
         categories[column] = categories[column].astype(str).str[-1]
-        
-    # convert column from string to numeric
-    categories[column] = categories[column].astype(int)
-    
+            
     df = df.drop(['categories'], axis=1)
     df = pd.concat([df, categories], axis=1)
     
@@ -86,8 +83,12 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     
     df = df.dropna(how='any', subset=category_colnames)
     
+    # convert column from string to integer
+    for col in category_colnames:
+        df[col] = df[col].astype(int)
+
     # replace category value of 2 to 1 
-    df['related'] = df.related.astype(int).replace(2, 1)
+    df['related'] = df.related.replace(2, 1)
 
     return df
 
