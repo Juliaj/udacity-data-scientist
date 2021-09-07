@@ -7,6 +7,7 @@ from typing import List
 
 import pandas as pd
 
+
 def load_json(file_path: str) -> pd.DataFrame:
     """Load json data file to dataframe.
     Args:
@@ -17,6 +18,7 @@ def load_json(file_path: str) -> pd.DataFrame:
     """
 
     return pd.read_json(file_path, orient='records', lines=True)
+
 
 def load_pkl(file_path: str) -> pd.DataFrame:
     """Load pkl data file to dataframe.
@@ -29,7 +31,8 @@ def load_pkl(file_path: str) -> pd.DataFrame:
 
     return pd.read_pickle(file_path)
 
-def save(df: pd.DataFrame, file_path:str):
+
+def save(df: pd.DataFrame, file_path: str):
     """Save data to pickel format
 
     Args:
@@ -41,7 +44,9 @@ def save(df: pd.DataFrame, file_path:str):
     """
     df.to_pickle(file_path)
 
-def generate_output_filepath(input_filepath: str , output_dir : str, file_ext : str) -> str:
+
+def generate_output_filepath(input_filepath: str, output_dir: str,
+                             file_ext: str) -> str:
     """Generete a output file path based on input path.
 
     The output path will be {out_dir}/{input_file_base}.{out_ext}
@@ -55,4 +60,3 @@ def generate_output_filepath(input_filepath: str , output_dir : str, file_ext : 
         An absolute file path.
     """
     pass
-    

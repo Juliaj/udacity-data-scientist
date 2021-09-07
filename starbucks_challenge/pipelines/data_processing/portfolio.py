@@ -21,19 +21,21 @@ def process_channels_data(df, col='channels'):
     channels_df - (pandas dataframe) with each channel as a seperate column and total channel count
     
     '''
-    
+
     #Exract unique channels
     channs = set()
     for chan in df[col]:
         channs.update(set(chan))
     channs = list(channs)
-    
+
     new_channs = pd.DataFrame()
     for column in channs:
-        new_channs[f'{column}_ch'] = df[col].apply(lambda x: 1 if column in x else 0)
+        new_channs[f'{column}_ch'] = df[col].apply(lambda x: 1
+                                                   if column in x else 0)
         new_channs['num_channels'] = df[col].apply(lambda x: len(x))
-    
+
     return new_channs
+
 
 def process(df):
     """Goes through all processing steps and transforms raw data into interrim data.
@@ -55,7 +57,7 @@ def process(df):
     new_df = pd.concat([new_df, new_channs], axis=1, sort=False)
     # drop column
     new_df.drop('channels', inplace=True, axis=1)
-    
+
     # apply one-hot encoding to offer_type column
     offer_types = pd.get_dummies(new_df['offer_type'])
     new_df = pd.concat([new_df, offer_types], axis=1, sort=False)
@@ -63,29 +65,33 @@ def process(df):
     new_df.drop('offer_type', inplace=True, axis=1)
 
     # rename for standardization
-    new_df.rename(columns={'id':'offer_id', 'reward':'offer_reward'}, inplace=True)
-    
+    new_df.rename(columns={
+        'id': 'offer_id',
+        'reward': 'offer_reward'
+    },
+                  inplace=True)
+
     return new_df
 
-          
+
 def main():
-    
+
     if len(sys.argv) == 3:
 
         input_filepath, output_filepath = sys.argv[1:]
         print(f'Loading raw data from {input_filepath}.')
-  
+
         df = util.load_json(input_filepath)
         print(f'    Input data shape: {df.shape}')
-        
+
         print('Processing and cleaning data...')
         df = process(df)
-        
+
         print(f'    After transform, data shape: {df.shape}')
 
         print(f'Saving data to {output_filepath}')
         util.save(df, output_filepath)
-        
+
         print('Data saved.')
 
     else:
@@ -93,18 +99,6 @@ def main():
               f'as well as the file path to save the cleaned data \n\nExample: python {os.path.basename(__file__)} '\
               '../data/0_raw/data1.json ../data/1_interim/data1.pkl ')
 
+
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
