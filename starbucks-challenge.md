@@ -845,7 +845,7 @@ A nearly perfect score is delightful however worrysome. Does this have anythig t
 ![png](./images/starbuckschallenge/ModelingOfferResponse/output_51_0.png)
     
 
-`purchase_during_offer` showed up as the most dominiate feature. The second is the membership_length.  Other features had very little influence to the prediction. `purchase_during_offer` is a compound feature that we calculated based on the purchase that customer made during an offer period. If we had known a purchase made, we'd know almost for sure that customer repsonded and vice versa. In other words, we have a feature directly correlated to the training target. In this light, the classifer we trained is not truely `predictive`. We need to take this out and retrain.
+`purchase_during_offer` showed up as the most dominiate feature. The second is the membership_length.  Other features had very little influence to the prediction. `purchase_during_offer` is a compound feature that we calculated based on the purchase that customer made during an offer period. If we had known a purchase made, we'd know almost for sure that customer repsonded and vice versa. In other words, we have a feature directly correlated to the training target. In this light, the classifer we trained is not truely `predictive` because `purchase_during_offer` was leaking information. We need to take this out and retrain.
 
 
 ### Training without knowing the purchase made
@@ -1084,19 +1084,7 @@ get_scores('n_estimators')
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1189,19 +1177,7 @@ get_scores(param_name)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1279,19 +1255,7 @@ get_scores(param_name)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1363,19 +1327,7 @@ get_scores(param_name)
     Grid search result: best max_features = {'max_features': 45}, best training_score = 0.7284238685220747, f1_score: 0.7310365978327539
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1517,3 +1469,17 @@ Last, I'd like to thank all the instructors, project mentors and reviewers for t
 ## Acknowledgements
 
 The dataset used in this project contains simulated data from Starbucks rewards program. The data were made available via [Udacity Data Science Nanodegree](https://classroom.udacity.com/nanodegrees/nd025/dashboard/overview). 
+
+## Keep Learning
+
+Resources suggested by project reviewer from Udacity. 
+
+https://elitedatascience.com/data-science-resources
+https://www.kdnuggets.com/2021/02/10-resources-data-science-self-study.html
+
+[Excellent blog on data pre processing](https://heartbeat.fritz.ai/data-preprocessing-and-visualization-implications-for-your-machine-learning-model-8dfbaaa51423)
+
+https://www.analyticsvidhya.com/blog/2015/12/improve-machine-learning-results/
+https://www.kdnuggets.com/2020/09/improve-machine-learning-models-accuracy.html
+
+[An excellent article explaining the art of Grid Search]I(https://analyticsindiamag.com/guide-to-hyperparameters-tuning-using-gridsearchcv-and-randomizedsearchcv/)
