@@ -21,6 +21,8 @@ There are many areas that we can explore and analyze the pattern of Starbucks cu
 
 Three simulated datasets were provided for this challenge. These datasets mimics Starbucks' customer behavior using the Starbucks rewards mobile app.
 
+A detailed write up of the project can be found at [Coffe or no coffe ?](https://github.com/Juliaj/udacity-data-scientist/blob/gh-pages/starbucks-challenge.md). 
+
 ### 2. Project Components<a name="components"></a>
 
 Project contains following components.  
